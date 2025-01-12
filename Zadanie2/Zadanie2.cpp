@@ -46,7 +46,7 @@ Pstring::Pstring(const char s[]) {
         }
         str[SZ - 1] = '\x0';
     }
-    else strcpy(str, s);
+    else strcpy(str, s);//String::String(s);
 }
 /////////////////////////////////////////////////////////// 
 int main()

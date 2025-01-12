@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\79123\\OneDrive\\Desktop\\OOP\\Nasledovanie2\\Zadanie3\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{47B4BC4C-5237-4107-A130-09C8B661B6A8}|Zadanie3.vcxproj|C:\\Users\\79123\\OneDrive\\Desktop\\OOP\\Nasledovanie2\\Zadanie3\\Zadanie3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{47B4BC4C-5237-4107-A130-09C8B661B6A8}|Zadanie3.vcxproj|solutionrelative:Zadanie3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Zadanie3.cpp",
+              "DocumentMoniker": "C:\\Users\\79123\\OneDrive\\Desktop\\OOP\\Nasledovanie2\\Zadanie3\\Zadanie3.cpp",
+              "RelativeDocumentMoniker": "Zadanie3.cpp",
+              "ToolTip": "C:\\Users\\79123\\OneDrive\\Desktop\\OOP\\Nasledovanie2\\Zadanie3\\Zadanie3.cpp",
+              "RelativeToolTip": "Zadanie3.cpp",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA8AAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-12T20:33:55.423Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
