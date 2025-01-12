@@ -2,65 +2,83 @@
 #include <iostream>
 using namespace std;
 
-struct pair {
+struct pairS {
     int x;
     int y;
 };
 
-class Stack
-{
-protected:              // Замечание: использовать private нельзя 
-    enum { MAX = 3 };     // размер стека 
-    int st[MAX];        // данные, хранящиеся в стеке 
-    int top;              // индекс последнего элемента в стеке 
+class Stack{
+protected:              
+    enum { MAX = 6 };    
+    int st[MAX];         
+    int top;             
 public:
-    Stack()            // конструктор 
-    {
+    Stack(){
         top = -1;
     }
-    void push(int var) // помещение числа в стек 
-    {
+    void push(int var){
         st[++top] = var;
     }
-    int pop()           // извлечение числа из стека 
-    {
+    int pop(){
         return st[top--];
     }
 };
 /////////////////////////////////////////////////////////// 
-class Stack2 : public Stack
-{
+class Stack2 : public Stack{
 public:
-    void push(int var)      // помещение числа в стек 
-    {
-        if (top >= MAX - 1)     // если стек полон, то ошибка 
-        {
+    void push(int var){
+        if (top >= MAX - 1){
             cout << "\nОшибка: стек полон"; exit(1);
         }
-        Stack::push(var);   // вызов функции push класса Stack 
+        Stack::push(var);    
     }
-    int pop()                // извлечение числа из стека 
-    {
-        if (top < 0)         // если стек пуст, то ошибка 
-        {
+    int pop(){
+        if (top < 0){
             cout << "\nОшибка: стек пуст\n"; exit(1);
         }
         return Stack::pop(); // вызов функции pop класса Stack(можно без return) 
     }
 };
+class pairStack : public Stack2{
+private:
+    pairS N;
+public:
+    void push(pairS k) {
+        if (top + 2 <= MAX - 1) {
+            Stack2::push(k.x);
+            Stack2::push(k.y);
+        }
+        else cout << "Две координаты записать не выйдет(\n";
+    }
+    void pop() {
+        cout << "Координата y: " << Stack2::pop() << "\n";
+        cout << "Координата х: " << Stack2::pop() << "\n";
+    }
+};
 
 int main()
 {
-    cout << "Hello World!\n";
+    setlocale(LC_ALL, "Russian");
+    pairS Kak;
+    Kak.x = 12;
+    Kak.y = 10;
+    pairStack MMM;
+    MMM.push(Kak);
+    Kak.x = 122;
+    Kak.y = 1520;
+    MMM.push(Kak);
+    Kak.x = 76;
+    Kak.y = 89;
+    MMM.push(Kak);
+    _getch();
+    MMM.push(Kak);
+    _getch();
+    MMM.pop();
+    MMM.pop();
+    MMM.pop();
+    _getch();
+    MMM.pop();
+    _getch();
 }
 
-// Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
-// Отладка программы: F5 или меню "Отладка" > "Запустить отладку"
 
-// Советы по началу работы 
-//   1. В окне обозревателя решений можно добавлять файлы и управлять ими.
-//   2. В окне Team Explorer можно подключиться к системе управления версиями.
-//   3. В окне "Выходные данные" можно просматривать выходные данные сборки и другие сообщения.
-//   4. В окне "Список ошибок" можно просматривать ошибки.
-//   5. Последовательно выберите пункты меню "Проект" > "Добавить новый элемент", чтобы создать файлы кода, или "Проект" > "Добавить существующий элемент", чтобы добавить в проект существующие файлы кода.
-//   6. Чтобы снова открыть этот проект позже, выберите пункты меню "Файл" > "Открыть" > "Проект" и выберите SLN-файл.
